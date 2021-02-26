@@ -28,7 +28,7 @@ const saveUser = (user) => async (dispatch, getState) => {
     dispatch({ type: USER_SAVE_REQUEST, payload: user });
     if (!user.id) {
       const { data } = await axios.post(url, user);
-      dispatch({ type: USER_SAVE_SUCCESS, payload: data });
+      dispatch({ type: USER_SAVE_SUCCESS, payload: data.data });
     } else {
       const { data } = await axios.put(
         url + user.id,
