@@ -35,7 +35,7 @@ function Users(props) {
   const openModal = (user) => {
     setModal(true)
     setId(user.id)
-    setEmail(email)
+    setEmail(user.email)
     setName(user.first_name)
     setSurname(user.last_name)
   }
